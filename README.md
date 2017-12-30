@@ -5,7 +5,7 @@ hexo-theme-material-teal
 
 Material Design 风格的Hexo主题，修改自 [hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo)
 
-修改部分样式 [Preview](https://Zoctan.github.io/)
+ [Preview](https://hexo-theme-teal.herokuapp.com/)
 
 about关于页用到_data的json数据，需要将该文件夹放到source下
 
