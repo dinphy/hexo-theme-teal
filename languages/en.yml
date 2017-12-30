@@ -1,0 +1,31 @@
+global:
+  search_input_hint: "Search"
+
+visit_counter:
+  site_uv:           "Total Visitors: "
+  site_pv:           "Total Visited: "
+
+menu:
+  home:              "home"
+  archives:          "archives"
+  tags:              "tags"
+  th-list:           "Categories"
+  user:              "About"
+
+wechat:              "WeChat"
+alipay:              "ALiPay"
+
+post:
+  continue_reading:  "Continue reading..."
+  last_updated:      "Last updated: "
+  prev:              "prev"
+  next:              "next"
+  reward:            "$"
+
+about:
+  skills:            "Skills"
+  projects:          "Projects"
+
+tag:
+  all:               "All"
+  tags:              "Tags"

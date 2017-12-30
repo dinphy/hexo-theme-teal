@@ -1,0 +1,97 @@
+<% var aboutData = site.data.about; %>
+<article id="<%= post.layout %>-<%= post.slug %>" class="post-article article-type-<%= post.layout %> fade" itemprop="blogPost">
+    <div class="post-card">
+    <section>
+        <div class="card page-about flex-row">
+            <a href="/" class="avatar waves-effect waves-circle waves-light">
+                <%- image_tag(theme.avatar) %>
+            </a>
+            <div class="info flex-col">
+                <h3><strong><%- config.author %></strong></h3>
+                <p><%- config.description %></p>
+                  <%
+                    for (var i in theme.socail) {
+                      link = theme.socail[i];
+                  %>
+                  <li class="waves-block socail-icon %>">
+                    <a href="<%- url_for(link) %>" target="_blank">
+                      <i class="icon icon-<%= i %>" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <% } %>
+            </div>
+        </div>
+      </section>
+
+        <section>
+          <div class="about-me">
+              <h1 class="about-card-title">
+                <i class="icon icon-lg icon-mars" aria-hidden="true"></i> <%= __('menu.user') %>
+              </h1>
+              <div class="content"><%- post.content %></div>
+          </div>
+        </section>
+
+        <% if (aboutData.skills) { %>
+        <section>
+            <h1 class="about-card-title">
+              <i class="icon icon-lg icon-cogs" aria-hidden="true"></i> <%= __('about.skills') %>
+            </h1>
+            <ul class="skill-list">
+                <% for (var skill in aboutData.skills) { %>
+                    <% if (aboutData.skills[skill] > 0) { %>
+                        <li class="flex-row">
+                            <div class="flex-col"><%= skill %></div>
+                            <div class="flex-col">
+                                <% for (var i = 1; i <= aboutData.skills[skill]; i++) { %>
+                                    <i class="icon icon-star" aria-hidden="true"></i>
+                                <% } %>
+                                <% for (; i <= 6; i++) { %>
+                                    <i class="icon icon-star-o" aria-hidden="true"></i>
+                                <% } %>
+                            </div>
+                            <div class="flex-col"></div>
+                        </li>
+                    <% } else { %>
+                        <li class="flex-row">&nbsp;</li>
+                    <% } %>
+                <% } %>
+            </ul>
+        </section>
+        <% } %>
+
+        <% if (aboutData.projects && aboutData.projects.length > 0) { %>
+        <section>
+            <h1 class="about-card-title">
+              <i class="icon icon-lg icon-cubes" aria-hidden="true"></i> <%= __('about.projects') %>
+            </h1>
+            <div class="flex-row-wrap">
+              <% for (var i in aboutData.projects) { %>
+                <div class="project-item flex-col">
+                    <div class="card">
+                      <div class="card-image">
+                          <img class="card-cover-image" src="<%= aboutData.projects[i].image %>">
+                          <div class="card-title">
+                              <span><%= aboutData.projects[i].name %></span>
+                          </div>
+                          <div class="card-tag">
+                              <% for (var j in aboutData.projects[i].tags) { %>
+                                  <span><%= aboutData.projects[i].tags[j] %></span>
+                              <% } %>
+                          </div>
+                      </div>
+                      <div class="card-content">
+                          <%= aboutData.projects[i].description %>
+                      </div>
+                      <div class="card-action">
+                        <a class="post-nav-link" href="<%= aboutData.projects[i].link %>" target="_blank"><%= aboutData.projects[i].link_text %></a>
+                      </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </section>
+        <% } %>
+
+    </div>
+</article>
