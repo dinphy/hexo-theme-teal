@@ -7,17 +7,79 @@ Hexo Theme Material Teal
 
 Material Design 风格的 Hexo 主题 Teal 配色
 
-可以先看看效果：[Preview](https://hexo-theme-teal.herokuapp.com/)，测试贴并没有写，暂时没发现什么bug。
+效果：[Preview](https://hexo-theme-teal.herokuapp.com/)。
 
 原版[hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo)一些小细节没写出来，所以我就按照自己的想法做了少量填补。
 
 ## 快速开始
 
-如果是Linux系统，直接运行demo文件夹里的start.sh脚本就可以在本地开始了。
+安装需确认你的 Hexo 版本在 3.0 以上，以及 Node 版本为 6.x 以上，在 Hexo 根目录，执行以下命令。
 
-demo文件夹内另一个delay.sh脚本是压缩并将文件部署到github上的，所以要事先填好demo文件夹里的_config.yml配置文件最后两行。
+git clone https://github.com/Zoctan/hexo-theme-teal.git
 
-about关于页用到_data的json数据，需要将该文件夹放到source下
+如果是 Linux 系统，直接运行 demo 文件夹里的 start.sh 脚本就可以在本地开始了。
+
+### Less
+
+主题默认使用 less 作为 css 预处理工具。
+
+```bash
+npm install hexo-renderer-less --save
+```
+
+### Feed
+
+用于生成 rss。
+
+```bash
+npm install hexo-generator-feed --save
+```
+
+### Json-content
+
+用于生成静态站点数据，用作站内搜索的数据源。
+
+```bash
+npm install hexo-generator-json-content --save
+```
+
+### QRCode
+
+用于生成微信分享二维码。（可选，不安装时会请求 jiathis Api 生成二维码）
+
+```bash
+npm install hexo-helper-qrcode --save
+```
+
+### 开启标签页
+
+修改 hexo/source/tags/index.md 的元数据
+
+```markdown
+layout: tags
+comments: false
+---
+```
+
+### 开启分类页
+
+修改 hexo/source/categories/index.md 的元数据
+
+```markdown
+layout: categories
+comments: false
+---
+```
+
+### 快速部署
+
+事先填好 /demo/_config.yml 配置文件最后两行。
+
+运行 /demo/delay.sh 脚本即可压缩并将文件部署到 github。
+
+### 关于页
+
+about 关于页用到 /_data 的 Json 数据，需要将该文件夹放到 /source 下
 
 ## 其他使用方法
 
