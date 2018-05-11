@@ -20,3 +20,5 @@ demo/themes/hexo-theme-teal/languages/
 demo/themes/hexo-theme-teal/package\.json
 
 demo/themes/hexo-theme-teal/_config\.yml
+
+\.idea/
