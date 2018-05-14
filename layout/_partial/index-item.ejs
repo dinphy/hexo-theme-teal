@@ -2,6 +2,12 @@
     <div class="post-meta">
         <%- partial('post/date', { date_format: config.date_format }) %>
         <%- partial('post/category') %>
+        <span style="color: dodgerblue">
+            字数：<%- wordcount(post.content) %>
+        </span>
+        <span>
+            阅读预计<span style="color: orange;"> <%= min2read(post.content) * 2.5 %> </span> 分钟
+        </span>
     </div>
 
     <%- partial('post/title', { hasLink: true }) %>
