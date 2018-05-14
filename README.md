@@ -7,9 +7,9 @@ Hexo Theme Material Teal
 
 Material Design 风格的 Hexo 主题 Teal 配色
 
-yscoder原版：[hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo) [预览效果](https://yscoder.github.io)
+yscoder原版[预览效果](https://yscoder.github.io)：[hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo) 
 
-Zoctan版本：[hexo-theme-teal](https://github.com/Zoctan/hexo-theme-teal) [预览效果](https://hexo-theme-teal.herokuapp.com/)。
+Zoctan版本[预览效果](https://hexo-theme-teal.herokuapp.com/)：[hexo-theme-teal](https://github.com/Zoctan/hexo-theme-teal) 
 
 dinphy版本：
 
@@ -22,53 +22,50 @@ dinphy版本：
 	- TOC翻译为中文
 	- demo文件夹中的内容直接复制到对应的source文件夹使用
 
-## 快速开始
+## 快速开始[Hexo | 帮助文档](https://hexo.io/zh-cn/docs/)
+
+###环境配置
+
+>安装所需工具
+
+（1）node.js：[https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+
+（2）git：[https://git-scm.com/downloads](https://git-scm.com/downloads)
+
+>托管平台注册
+
+```bash
+1、平台注册账号，新建域名
+github（源码托管服务站）：https://github.com/
+到GitHub官网，注册自己的账号，填好用户名，密码，邮箱，并完成邮箱验证就可以啦！
+默认的域名是http://username.github.io/,（username为你想要的名字）如果想要一个特别的域名，可以买一个域名，并在setting里面绑定就可以了。
+以上完成了第一步，我们有自己的代码仓库了，接下来我们要配置本机环境了！
+2、服务器 SSH授权
+（1）鼠标右键打开git bash，输入命令：ssh-keygen -t rsa, 接着回车三下
+这样就会在C盘（C:\Users\Administrator\.ssh）用户目录下生成id_rsa和id_rsa.pub这两个文件，前者是密钥，后者是公钥，用记事本打开id_rsa.pub，复制其中的全部内容，登录号自己的github账号，进入https://github.com/settings/keys页面New SSH keys添加到GitHub上，Title随便写，这样本地的id_rsa密钥就可以和GitHub上的id_rsa.pub公钥进行配对，授权成功。
+（2）SSH key添加之后，就可以在本机git bash中进行测试，输入命令：ssh -T git@github.com 进行测试。（yes/no ?）输入yes。
+返回Hi username ！You've successfully ......说明你已经成功啦！
+```
+
+###初始化hexo
+
+在任意地方新建一个建站的空文件夹，然后在此文件夹下右键选择git bash打开，执行初始化命令：hexo init
 
 安装需确认你的 Hexo 版本在 3.0 以上，以及 Node 版本为 6.x 以上 10.0 以下，在 Hexo 根目录，执行以下命令。
 
-git clone https://github.com/Zoctan/hexo-theme-teal.git
+git clone https://github.com/dinphy/hexo-theme-teal.git
 
 ## 依赖安装
 
 ```bash
-sudo npm install hexo-cli -g
-
-sudo npm install gulp gulp-minify-css gulp-htmlmin gulp-uglify gulp-clean-css -g
-
-sudo npm install babel-cli gulp-babel babel-preset-env -g
+npm install -g hexo hexo-cli gulp gulp-minify-css gulp-htmlmin gulp-uglify gulp-clean-css babel-cli gulp-babel babel-preset-env
 ```
-
-### Less
-
-主题默认使用 less 作为 css 预处理工具。
 
 ```bash
-npm install hexo-renderer-less --save
+npm install --save hexo hexo-renderer-less hexo-generator-search hexo-deployer-git hexo-wordcount hexo-helper-qrcode hexo-generator-json-content hexo-generator-feed
 ```
 
-### Feed
-
-用于生成 rss。
-
-```bash
-npm install hexo-generator-feed --save
-```
-
-### Json-content
-
-用于生成静态站点数据，用作站内搜索的数据源。
-
-```bash
-npm install hexo-generator-json-content --save
-```
-
-### QRCode
-
-用于生成微信分享二维码。（可选，不安装时会请求 jiathis Api 生成二维码）
-
-```bash
-npm install hexo-helper-qrcode --save
-```
+## 新建缺失的页面，可以直接复制demo文件夹到项目根目录，亦可以按照下面的的步骤
 
 ### 开启标签页
 
@@ -92,13 +89,27 @@ comments: false
 
 ### 关于页
 
-about 关于页用到 /_data 的 Json 数据，需要将该文件夹放到 /source 下
+about 关于页用到 /demo/souece/_data 的 Json 数据，需要将该文件夹放到 /source 下
 
 ## 快速部署
 
-如果是 Linux 系统，直接运行 demo 文件夹里的 start.sh 脚本就可以在本地开始了。
+参照/demo文件夹下的_config.yml配置
 
-事先填好 /demo/_config.yml 配置文件最后两行，运行 /demo/delay.sh 脚本即可压缩并部署到 github。
+##生成页面
+
+	hexo g
+	
+##本地测试
+
+	hexo s
+	
+	(如果端口被占用，可以使用命令更改端口：hexo s -p 5000)
+	
+##上传github
+
+	hexo d -m "update commit"
+	
+	(亦可以不加 '-m' 参数，这是说明你做了什么操作--提交记录，不加的话直接提交记录就是hexo默认的)
 
 ## 其他使用方法
 
