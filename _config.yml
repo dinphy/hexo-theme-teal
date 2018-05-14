@@ -8,7 +8,7 @@ menu:
   user:                   /about
 
 # 你的头像url
-avatar:                   /img/avatar.png
+avatar:                   /img/avatar.jpg
 # avatar link
 avatar_link:              /about
 # 头像背景图
@@ -39,8 +39,8 @@ share:                    true
 # 是否开启打赏，关闭 reward:       false
 reward:
   title:                  赏包辣条钱吧(๑•ᴗ•๑)~
-  wechat:                 /img/wechat.png     #微信，关闭设为 false
-  alipay:                 /img/alipay.png     #支付宝，关闭设为 false
+  wechat:                 /img/wechat.gif     #微信，关闭设为 false
+  alipay:                 /img/alipay.gif     #支付宝，关闭设为 false
 
 # 是否开启搜索
 search:                   true
