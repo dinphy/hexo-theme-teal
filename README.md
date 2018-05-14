@@ -7,8 +7,11 @@ Hexo Theme Material Teal
 
 Material Design 风格的 Hexo 主题 Teal 配色
 
-效果：[Preview](https://hexo-theme-teal.herokuapp.com/)。
+yscoder原版：[hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo) [预览效果](https://yscoder.github.io)
 
+Zoctan版本：[hexo-theme-teal](https://github.com/Zoctan/hexo-theme-teal) [预览效果](https://hexo-theme-teal.herokuapp.com/)。
+
+dinphy版本：
 原版[hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo)一些小细节没写出来，所以我就按照自己的想法做了少量填补。
 
 ## 快速开始

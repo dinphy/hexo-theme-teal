@@ -17,8 +17,8 @@ brand:                    /img/brand.png
 favicon:                  /img/favicon.ico
 
 socail:
-  github:                 https://github.com/
-  stack-overflow:         https://stackoverflow.com/users/
+  github:                 https://github.com/dinphy
+  coffee:                 http://www.cnblogs.com/dinphy/
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color:                    "#009688"
@@ -54,7 +54,7 @@ toc:
   list_number:            true  # 是否显示数字排序
 
 # 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
-postMessage:              文章页留言内容
+postMessage:              文章地址：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- post.title %></a>
 
 # 站长统计，如要开启，输入CNZZ站点id，如 cnzz: 1255152447
 cnzz:
@@ -71,7 +71,7 @@ google_site_verification: false
 
 # less
 less:
-  compress:               true
+  compress: true             # 压缩
   paths:
     - source/css/style.less
 
