@@ -35,21 +35,32 @@ dinphy版本：
 >托管平台注册
 
 - 平台注册账号，新建域名：[https://github.com/](https://github.com/)
-默认的域名是http://username.github.io/,（username为你想要的名字）.
+默认的域名是http://username.github.io/，username为你想要的名字。
 以上完成了第一步，我们有自己的代码仓库了，接下来我们要配置本机环境了！
+
 - 服务器 SSH授权
 
-（1）右键打开git bash，输入命令：ssh-keygen -t rsa, 接着回车三下,会在C盘（C:\Users\Administrator\.ssh）用户目录下生成id_rsa和id_rsa.pub这两个文件，前者是密钥，后者是公钥，用记事本打开id_rsa.pub，复制其中的全部内容，登录号自己的github账号，进入[https://github.com/settings/keys](https://github.com/settings/keys)页面New SSH keys添加到GitHub上，Title随便写，这样本地的id_rsa密钥就可以和GitHub上的id_rsa.pub公钥进行配对，授权成功。
+（1）右键打开git bash，输入命令：
 
-（2）SSH key添加之后，就可以在本机git bash中进行测试，输入命令：ssh -T git@github.com 进行测试。（yes/no ?）输入yes。返回Hi username ！You've successfully ......说明你已经成功啦！
+>ssh-keygen -t rsa
+
+接着回车三下,会在C盘（C:\Users\Administrator\.ssh）用户目录下生成id_rsa和id_rsa.pub这两个文件，前者是密钥，后者是公钥，用记事本打开id_rsa.pub，复制其中的全部内容，登录号自己的github账号，进入[https://github.com/settings/keys](https://github.com/settings/keys)页面New SSH keys添加到GitHub上，Title随便写，这样本地的id_rsa密钥就可以和GitHub上的id_rsa.pub公钥进行配对，授权成功。
+
+（2）SSH key添加之后，就可以在本机git bash中进行测试，输入命令：
+
+>ssh -T git@github.com 
+
+进行测试。（yes/no ?）输入yes。返回Hi username ！You've successfully ......说明你已经成功啦！
 
 #### 初始化hexo
 
-在任意地方新建一个建站的空文件夹，然后在此文件夹下右键选择git bash打开，执行初始化命令：hexo init
+在任意地方新建一个建站的空文件夹，然后在此文件夹下右键选择git bash打开，执行初始化命令：
+
+>hexo init
 
 安装需确认你的 Hexo 版本在 3.0 以上，以及 Node 版本为 6.x 以上 10.0 以下，在 Hexo 根目录，执行以下命令。
 
-git clone https://github.com/dinphy/hexo-theme-teal.git
+git clone https://github.com/dinphy/hexo-theme-teal.git themes/teal
 
 ### 依赖安装
 
