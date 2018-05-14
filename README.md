@@ -12,7 +12,15 @@ yscoder原版：[hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo
 Zoctan版本：[hexo-theme-teal](https://github.com/Zoctan/hexo-theme-teal) [预览效果](https://hexo-theme-teal.herokuapp.com/)。
 
 dinphy版本：
-原版[hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo)一些小细节没写出来，所以我就按照自己的想法做了少量填补。
+
+	- 修复搜索
+	- 改变字体大小，修复对齐分享中的图标
+	- 添加文章字数统计
+	- 添加文章篇数统计
+	- 添加文章页结束语
+	- 添加Valine评论插件
+	- TOC翻译为中文
+	- demo文件夹中的内容直接复制到对应的source文件夹使用
 
 ## 快速开始
 

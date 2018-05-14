@@ -2,8 +2,8 @@ global:
   search_input_hint: "输入感兴趣的关键字"
 
 visit_counter:
-  site_uv:           "总访客："
-  site_pv:           "总访问："
+  site_uv:           "总访客数："
+  site_pv:           "总访问量："
 
 menu:
   home:              "主页"
@@ -18,8 +18,8 @@ alipay:              "支付宝"
 post:
   continue_reading:  "阅读全文…"
   last_updated:      "最后更新时间："
-  prev:              "上一页"
-  next:              "下一页"
+  prev:              "上一篇"
+  next:              "下一篇"
   reward:            "￥"
 
 about:
