@@ -26,13 +26,13 @@ dinphy版本：
 
 #### 环境配置
 
->安装所需工具
+##### 安装所需工具
 
 （1）node.js：[https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 （2）git：[https://git-scm.com/downloads](https://git-scm.com/downloads)
 
->托管平台注册
+##### 托管平台注册
 
 - 平台注册账号，新建域名：[https://github.com/](https://github.com/)
 默认的域名是http://username.github.io/，username为你想要的名字。
