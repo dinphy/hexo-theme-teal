@@ -41,8 +41,8 @@
     }
 
     function tpl(html, data) {
-        return html.replace(/{w+}/g, function(str) {
-            var prop = str.replace(/[{}]/g, '');
+        return html.replace(/\{\w+\}/g, function (str) {
+            var prop = str.replace(/\{|\}/g, '');
             return data[prop] || '';
         });
     }
