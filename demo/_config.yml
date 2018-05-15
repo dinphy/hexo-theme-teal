@@ -82,7 +82,7 @@ category_generator:
 # Extensions | 主题扩展
 ## Plugins:         https://hexo.io/plugins/
 ## Themes:          https://hexo.io/themes/
-theme:              hexo-theme-teal
+theme:             teal
 
 # Deployment | 部署
 ## Docs:            https://hexo.io/zh-cn/docs/deployment.html
