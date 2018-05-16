@@ -29,20 +29,55 @@
     <div class="scroll-wrap flex-col">
       <ul class="nav">
         <%
-          var menuLink, isActive = function(link) {
+          var menuLink1, menuLink2, menuLink3, menuLink4, menuLink5, isActive = function(link) {
               var pageLink = url_for(page.path)
               return link === '/' ? pageLink === url_for(link + 'index.html') : _.startsWith(pageLink, url_for(link))
           };
-          for (var i in theme.menu) {
-            menuLink = theme.menu[i];
+          
+            menuLink1 = theme.menu['home'];
+	    menuLink2 = theme.menu['th-list'];
+	    menuLink3 = theme.menu['archives'];
+	    menuLink4 = theme.menu['tags'];
+	    menuLink5 = theme.menu['user'];
           %>
-            <li class="waves-block waves-effect<% if(isActive(menuLink)){ %> active<% } %>">
-              <a href="<%- url_for(menuLink) %>">
-                <i class="icon icon-lg icon-<%= i %>" aria-hidden="true"></i>
-                <%=(__('menu.' + i) || _.startCase(i)) %>
+	  <li class="waves-block waves-effect<% if(isActive(menuLink1)){ %> active<% } %>">
+              <a href="<%- url_for(menuLink1) %>">
+                <i class="icon icon-lg icon-<%= 'home' %>" aria-hidden="true"></i>
+                <%=(__('menu.' + 'home') || _.startCase('home')) %>
               </a>
             </li>
-        <% } %>
+            <li class="waves-block waves-effect<% if(isActive(menuLink2)){ %> active<% } %>">
+              <a href="<%- url_for(menuLink2) %>">
+                <i class="icon icon-lg icon-<%= 'th-list' %>" aria-hidden="true"></i>
+                <%=(__('menu.' + 'th-list') || _.startCase('th-list')) %>
+              </a>
+	            <ul class="nav">
+	                <li>
+	                <%- list_categories({
+	                    show_count: false,
+	                    style: 'none',
+	                    separator: '</li><li>'
+	                }) %>
+	            </ul>
+            </li>
+	  <li class="waves-block waves-effect<% if(isActive(menuLink3)){ %> active<% } %>">
+              <a href="<%- url_for(menuLink3) %>">
+                <i class="icon icon-lg icon-<%= 'archives' %>" aria-hidden="true"></i>
+                <%=(__('menu.' + 'archives') || _.startCase('archives')) %>
+              </a>
+            </li>
+            <li class="waves-block waves-effect<% if(isActive(menuLink4)){ %> active<% } %>">
+              <a href="<%- url_for(menuLink4) %>">
+                <i class="icon icon-lg icon-<%= 'tags' %>" aria-hidden="true"></i>
+                <%=(__('menu.' + 'tags') || _.startCase('tags')) %>
+              </a>
+            </li>
+            <li class="waves-block waves-effect<% if(isActive(menuLink5)){ %> active<% } %>">
+              <a href="<%- url_for(menuLink5) %>">
+                <i class="icon icon-lg icon-<%= 'user' %>" aria-hidden="true"></i>
+                <%=(__('menu.' + 'user') || _.startCase('user')) %>
+              </a>
+            </li>        
       </ul>
     </div>
   </div>
