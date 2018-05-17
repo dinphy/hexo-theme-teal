@@ -46,20 +46,20 @@
                 <%=(__('menu.' + 'home') || _.startCase('home')) %>
               </a>
             </li>
-            <li class="waves-block waves-effect<% if(isActive(menuLink2)){ %> active<% } %>">
-              <a href="<%- url_for(menuLink2) %>">
-                <i class="icon icon-lg icon-<%= 'th-list' %>" aria-hidden="true"></i>
-                <%=(__('menu.' + 'th-list') || _.startCase('th-list')) %>
-              </a>
-	            <ul class="nav">
-	                <li>
-	                <%- list_categories({
-	                    show_count: false,
-	                    style: 'none',
-	                    separator: '</li><li>'
-	                }) %>
-	            </ul>
-            </li>
+	  <li class="waves-block waves-effect<% if(isActive(menuLink2)){ %> active<% } %>">
+		<a href="<%- url_for(menuLink2) %>">
+			<i class="icon icon-lg icon-<%= 'th-list' %>" aria-hidden="true"></i>
+			<%=(__('menu.' + 'th-list') || _.startCase('th-list')) %>
+		</a>
+		<ul style="display: block;list-style:none;padding-left:0px;">
+			<li>
+			<%- list_categories({
+				show_count: false,
+				style: 'none',
+				separator: '</li><li>'
+			}) %>
+		</ul>				
+	  </li>
 	  <li class="waves-block waves-effect<% if(isActive(menuLink3)){ %> active<% } %>">
               <a href="<%- url_for(menuLink3) %>">
                 <i class="icon icon-lg icon-<%= 'archives' %>" aria-hidden="true"></i>
