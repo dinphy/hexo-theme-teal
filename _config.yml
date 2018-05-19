@@ -54,7 +54,7 @@ toc:
   list_number:            true  # 是否显示数字排序
 
 # 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
-postMessage:              文章地址：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- post.title %></a>
+#postMessage:              文章地址：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- post.title %></a>
 
 # 站长统计，如要开启，输入CNZZ站点id，如 cnzz: 1255152447
 cnzz:
@@ -119,3 +119,10 @@ lightbox:                 true
 
 # icp备案号  ICP_license:    京ICP备1234556号-1
 ICP_license:              false
+
+# Post License | 在每篇文章的结尾添加你的版权说明
+# You can specify the text you want to show in the end of your posts and pages, HTML tag is supported.
+#   For example, you can setup a CC license as:
+#       'This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>'
+# You can also use Front-Matter `license` to override this setting.
+license: "<b>本文采用：署名-非商业性使用-禁止演绎 4.0 国际</b> 协议进行许可，阅读 <a rel='nofollow noopener' href='https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh' target='_blank'>相关说明</a>"

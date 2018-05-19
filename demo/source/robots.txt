@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /tags/
+Allow: /page/
+Allow: /posts/
+Allow: /about/
+Allow: /categories/业余小作/
+Allow: /categories/学习笔记/
+Allow: /css/
+Allow: /img/
+Allow: /js/
+
+Sitemap: https://dinphy.github.io/sitemap.xml

@@ -1,12 +1,19 @@
 <blockquote class="post-copyright">
-    <% if(theme.postMessage || theme.show_last_updated) { %>
-    <div class="content">
-        <%- partial('updated') %>
-        <% if (theme.postMessage) { %>
-        <p><%- _.template(theme.postMessage)(locals) %></p>
-        <% } %>
-    </div>
-    <% } %>
+<% if (page.hide_license !== true && theme.license || page.license) { %>
+        <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+            <p>
+	            <b>本文标题：</b> <%- page.title %><br>
+	            <b>最后更新：</b><%= date(page.updated, 'YYYY 年 MM 月 DD 日 - HH:MM') %><br>
+	            <b>本文链接：</b><a href="<%= page.permalink %>"><%= page.permalink %></a><br>
+	                <% if (page.license) { %>
+	                    <%- page.license %>
+	                <% } else { %> 
+	                    <%- theme.license %>
+	                <% } %>
+            </p>
+        </blockquote>
+<% } %>
+<br><br>
     <footer>
         <a href="<%- config.url %>">
             <img src="<%- url_for(theme.avatar) %>" alt="<%- config.author %>">
