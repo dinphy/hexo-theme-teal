@@ -9,10 +9,10 @@
             <%- partial('post/category') %>
             <%- partial('plugins/page-visit') %>
             <span style="color: dodgerblue">
-                字数：<span style="font-size: 14px;"> <%- wordcount(post.content) %></span>
+                <span style="font-size: 14px;"> <%- wordcount(post.content) %></span>字
             </span>
             <span>
-                阅读预计<span style="font-size: 14px; color: orange;">  <%= min2read(post.content) * 2.5 %>  </span> 分钟
+                将阅读<span style="font-size: 14px; color: orange;">  <%= min2read(post.content) * 2.5 %>  </span>分钟
             </span>
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">

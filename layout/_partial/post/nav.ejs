@@ -6,7 +6,7 @@
     <div class="waves-block waves-effect prev">
       <a href="<%- url_for(post.prev.path) %>" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr" aria-hidden="true"></i>&nbsp;<%= __('post.prev') %></div>
-        <h4 class="title">&nbsp;&nbsp;<%= prevTitle %></h4>
+        <!-- <h4 class="title">&nbsp;&nbsp;<%= prevTitle %></h4> -->
       </a>
     </div>
   <% } %>
@@ -17,7 +17,7 @@
     <div class="waves-block waves-effect next">
       <a href="<%- url_for(post.next.path) %>" id="post-next" class="post-nav-link">
         <div class="tips"><%= __('post.next') %>&nbsp;<i class="icon icon-angle-right icon-lg icon-pl" aria-hidden="true"></i></div>
-        <h4 class="title"><%= nextTitle %>&nbsp;&nbsp;</h4>
+        <!-- <h4 class="title"><%= nextTitle %>&nbsp;&nbsp;</h4> -->
       </a>
     </div>
   <% } %>
