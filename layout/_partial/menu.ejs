@@ -10,19 +10,17 @@
 					<img src="<%- url_for(theme.avatar) %>">
 				  </a>
 				  <h5 class="nickname"><%- config.author %></h5>
-			  
-				  <h5 class="description"><%- config.description %></h5>
-				  <div style="margin-top: 5px; font-size: 92%"><b><%- site.posts.length %> 篇文章，共 <%- totalcount(site) %> 字</b></div>	  
-					<%
-					  for (var i in theme.socail) {
-						link = theme.socail[i];
-					%>
+				  <!-- <h5 class="description"><%- config.description %></h5> -->
+				<%
+				  for (var i in theme.socail) {
+					link = theme.socail[i];
+				%>
 					<li class="waves-block socail-icon %>">
 					  <a href="<%- url_for(link) %>" target="_blank">
 						<i class="icon icon-lg icon-<%= i %>" aria-hidden="true"></i>
 					  </a>
 					</li>
-					<% } %>
+				<% } %>
 				</header>
 			</div>
 		</div>
@@ -81,6 +79,7 @@
 					</li>
 				</ul>
 				<div class="jquery-accordion-menu-footer">
+					<b>文章总数：<%- site.posts.length %> 篇（ <%- totalcount(site) %>字）</b>
 				</div>
 		</div>
 
