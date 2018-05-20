@@ -26,7 +26,7 @@
         </header>
       </div>
     </div>
-<div class="content">
+<div class="scroll-wrap flex-col">
         <%
           var menuLink1, menuLink2, menuLink3, menuLink4, menuLink5, isActive = function(link) {
               var pageLink = url_for(page.path)
@@ -41,23 +41,46 @@
           %>
 	<div id="jquery-accordion-menu" class="jquery-accordion-menu white">
 		<ul id="demo-list">	 
-		   <li class="active"><a href="<%- url_for(menuLink1) %>"><i class="fa fa-home" aria-hidden="true"></i><%=(__('menu.' + 'home') || _.startCase('home')) %></a></li>
-			<li><a href="<%- url_for(menuLink2) %>"><i class="fa fa-list-alt" aria-hidden="true"></i><%=(__('menu.' + 'th-list') || _.startCase('th-list')) %></a>
-				<ul class="submenu">
-					<li>
-					<%- list_categories({
-						show_count: false,
-						style: 'none',
-						separator: '</li><li>'
-					}) %>
-				</ul>
+		   <li class="waves-block waves-effect<% if(isActive(menuLink1)){ %> active<% } %>">
+				<a href="<%- url_for(menuLink1) %>">
+					<i class="fa fa-home" aria-hidden="true"></i>
+					<%=(__('menu.' + 'home') || _.startCase('home')) %>
+				</a>
 			</li>
-			<li><a href="<%- url_for(menuLink3) %>"><i class="fa fa-archive" aria-hidden="true"></i><%=(__('menu.' + 'archives') || _.startCase('archives')) %></a></li>			
-			<li><a href="<%- url_for(menuLink4) %>"><i class="fa fa-tags" aria-hidden="true"></i><%=(__('menu.' + 'tags') || _.startCase('tags')) %></a></li>
-			<li><a href="<%- url_for(menuLink5) %>"><i class="fa fa-user" aria-hidden="true"></i></i><%=(__('menu.' + 'user') || _.startCase('user')) %></a></li>
+			<li class="waves-block waves-effect<% if(isActive(menuLink2)){ %> active<% } %>">
+				<a href="<%- url_for(menuLink2) %>">
+					<i class="fa fa-list-alt" aria-hidden="true"></i>
+					<%=(__('menu.' + 'th-list') || _.startCase('th-list')) %>
+				</a>
+					<ul class="submenu">
+						<li>
+						<%- list_categories({
+							show_count: false,
+							style: 'none',
+							separator: '</li><li>'
+						}) %>
+					</ul>
+			</li>
+			<li class="waves-block waves-effect<% if(isActive(menuLink3)){ %> active<% } %>">
+				<a href="<%- url_for(menuLink3) %>">
+					<i class="fa fa-archive" aria-hidden="true"></i>
+					<%=(__('menu.' + 'archives') || _.startCase('archives')) %>
+				</a>
+			</li>			
+			<li class="waves-block waves-effect<% if(isActive(menuLink4)){ %> active<% } %>">
+				<a href="<%- url_for(menuLink4) %>">
+					<i class="fa fa-tags" aria-hidden="true"></i>
+					<%=(__('menu.' + 'tags') || _.startCase('tags')) %>
+				</a>
+			</li>
+			<li class="waves-block waves-effect<% if(isActive(menuLink5)){ %> active<% } %>">
+				<a href="<%- url_for(menuLink5) %>">
+				<i class="fa fa-user" aria-hidden="true"></i>			
+				<%=(__('menu.' + 'user') || _.startCase('user')) %>
+				</a>
+			</li>
 		</ul>
 		<div class="jquery-accordion-menu-footer">
-			文章总数：<%- site.posts.length %>
 		</div>
 	</div>
 </div>
@@ -102,5 +125,5 @@ $(function() {
 <script type="text/javascript">
 	jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
 </script>
-  </div>
+</div>
 </aside>

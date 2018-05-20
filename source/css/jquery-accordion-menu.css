@@ -42,7 +42,7 @@
 	float: left;
 	text-decoration: none;
 	color: #f0f0f0;
-	font-size: 13px;
+	font-size: 16px;
 	background: #414956;
 	white-space: nowrap;
 	position: relative;
@@ -75,7 +75,7 @@
 	right: 22px;
 	position: absolute;
 	line-height: 19px;
-	font-size: 20px;
+	font-size: 16px;
 	-o-transition: transform .3s linear;
 	-moz-transition: transform .3s linear;
 	-webkit-transition: transform .3s linear;
@@ -107,8 +107,8 @@
 .jquery-accordion-menu ul ul.submenu li a {
 	width: 100%;
 	float: left;
-	font-size: 11px;
-	background: #383838;
+	font-size: 16px;
+	background: gray;
 	border-top: none;
 	position: relative;
 	border-left: solid 6px transparent;
@@ -140,7 +140,7 @@
 	position: absolute;
 	right: 18px;
 	top: 14px;
-	font-size: 11px;
+	font-size: 16px;
 	font-weight: 800;
 	color: #555;
 	text-align: center;
