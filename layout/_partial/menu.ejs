@@ -1,129 +1,129 @@
 <aside id="menu" <% if ((is_post() || page.layout === 'page') && theme.hideMenu) { %>class="hide"<% } %> >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-outdent" aria-hidden="true"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(<%- url_for(theme.brand) %>)">
-      <div class="brand">
-        <header class="introduce">
-          <a href="<%- url_for(theme.avatar_link) %>" class="avatar waves-effect waves-circle waves-light">
-            <img src="<%- url_for(theme.avatar) %>">
-          </a>
-          <h5 class="nickname"><%- config.author %></h5>
-	  
-          <h5 class="description"><%- config.description %></h5>
-          <div style="margin-top: 5px; font-size: 92%"><b><%- site.posts.length %> 篇文章，共 <%- totalcount(site) %> 字</b></div>	  
-            <%
-              for (var i in theme.socail) {
-                link = theme.socail[i];
-            %>
-            <li class="waves-block socail-icon %>">
-              <a href="<%- url_for(link) %>" target="_blank">
-                <i class="icon icon-lg icon-<%= i %>" aria-hidden="true"></i>
-              </a>
-            </li>
-            <% } %>
-        </header>
-      </div>
-    </div>
-<div class="scroll-wrap flex-col">
-        <%
-          var menuLink1, menuLink2, menuLink3, menuLink4, menuLink5, isActive = function(link) {
-              var pageLink = url_for(page.path)
-              return link === '/' ? pageLink === url_for(link + 'index.html') : _.startsWith(pageLink, url_for(link))
-          };
-          
-	    menuLink1 = theme.menu['home'];
-	    menuLink2 = theme.menu['th-list'];
-	    menuLink3 = theme.menu['archives'];
-	    menuLink4 = theme.menu['tags'];
-	    menuLink5 = theme.menu['user'];
-          %>
-	<div id="jquery-accordion-menu" class="jquery-accordion-menu white">
-		<ul id="demo-list">	 
-		   <li class="waves-block waves-effect<% if(isActive(menuLink1)){ %> active<% } %>">
-				<a href="<%- url_for(menuLink1) %>">
-					<i class="fa fa-home" aria-hidden="true"></i>
-					<%=(__('menu.' + 'home') || _.startCase('home')) %>
-				</a>
-			</li>
-			<li class="waves-block waves-effect<% if(isActive(menuLink2)){ %> active<% } %>">
-				<a href="<%- url_for(menuLink2) %>">
-					<i class="fa fa-list-alt" aria-hidden="true"></i>
-					<%=(__('menu.' + 'th-list') || _.startCase('th-list')) %>
-				</a>
-					<ul class="submenu">
-						<li>
-						<%- list_categories({
-							show_count: false,
-							style: 'none',
-							separator: '</li><li>'
-						}) %>
-					</ul>
-			</li>
-			<li class="waves-block waves-effect<% if(isActive(menuLink3)){ %> active<% } %>">
-				<a href="<%- url_for(menuLink3) %>">
-					<i class="fa fa-archive" aria-hidden="true"></i>
-					<%=(__('menu.' + 'archives') || _.startCase('archives')) %>
-				</a>
-			</li>			
-			<li class="waves-block waves-effect<% if(isActive(menuLink4)){ %> active<% } %>">
-				<a href="<%- url_for(menuLink4) %>">
-					<i class="fa fa-tags" aria-hidden="true"></i>
-					<%=(__('menu.' + 'tags') || _.startCase('tags')) %>
-				</a>
-			</li>
-			<li class="waves-block waves-effect<% if(isActive(menuLink5)){ %> active<% } %>">
-				<a href="<%- url_for(menuLink5) %>">
-				<i class="fa fa-user" aria-hidden="true"></i>			
-				<%=(__('menu.' + 'user') || _.startCase('user')) %>
-				</a>
-			</li>
-		</ul>
-		<div class="jquery-accordion-menu-footer">
+	<div class="inner flex-row-vertical">
+		<a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+			<i class="icon icon-lg icon-outdent" aria-hidden="true"></i>
+		</a>
+		<div class="brand-wrap" style="background-image:url(<%- url_for(theme.brand) %>)">
+			<div class="brand">
+				<header class="introduce">
+				  <a href="<%- url_for(theme.avatar_link) %>" class="avatar waves-effect waves-circle waves-light">
+					<img src="<%- url_for(theme.avatar) %>">
+				  </a>
+				  <h5 class="nickname"><%- config.author %></h5>
+			  
+				  <h5 class="description"><%- config.description %></h5>
+				  <div style="margin-top: 5px; font-size: 92%"><b><%- site.posts.length %> 篇文章，共 <%- totalcount(site) %> 字</b></div>	  
+					<%
+					  for (var i in theme.socail) {
+						link = theme.socail[i];
+					%>
+					<li class="waves-block socail-icon %>">
+					  <a href="<%- url_for(link) %>" target="_blank">
+						<i class="icon icon-lg icon-<%= i %>" aria-hidden="true"></i>
+					  </a>
+					</li>
+					<% } %>
+				</header>
+			</div>
 		</div>
+		<div class="scroll-wrap flex-col">
+			<%
+			  var menuLink1, menuLink2, menuLink3, menuLink4, menuLink5, isActive = function(link) {
+				  var pageLink = url_for(page.path)
+				  return link === '/' ? pageLink === url_for(link + 'index.html') : _.startsWith(pageLink, url_for(link))
+			  };
+			  
+			menuLink1 = theme.menu['home'];
+			menuLink2 = theme.menu['th-list'];
+			menuLink3 = theme.menu['archives'];
+			menuLink4 = theme.menu['tags'];
+			menuLink5 = theme.menu['user'];
+			  %>
+			<div id="jquery-accordion-menu" class="jquery-accordion-menu white">
+				<ul id="demo-list">	 
+				   <li class="waves-block waves-effect<% if(isActive(menuLink1)){ %> active<% } %>">
+						<a href="<%- url_for(menuLink1) %>">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<%=(__('menu.' + 'home') || _.startCase('home')) %>
+						</a>
+					</li>
+					<li class="waves-block waves-effect<% if(isActive(menuLink2)){ %> active<% } %>">
+						<a href="<%- url_for(menuLink2) %>">
+							<i class="fa fa-list-alt" aria-hidden="true"></i>
+							<%=(__('menu.' + 'th-list') || _.startCase('th-list')) %>
+						</a>
+							<ul class="submenu">
+								<li>
+								<%- list_categories({
+									show_count: false,
+									style: 'none',
+									separator: '</li><li>'
+								}) %>
+							</ul>
+					</li>
+					<li class="waves-block waves-effect<% if(isActive(menuLink3)){ %> active<% } %>">
+						<a href="<%- url_for(menuLink3) %>">
+							<i class="fa fa-archive" aria-hidden="true"></i>
+							<%=(__('menu.' + 'archives') || _.startCase('archives')) %>
+						</a>
+					</li>			
+					<li class="waves-block waves-effect<% if(isActive(menuLink4)){ %> active<% } %>">
+						<a href="<%- url_for(menuLink4) %>">
+							<i class="fa fa-tags" aria-hidden="true"></i>
+							<%=(__('menu.' + 'tags') || _.startCase('tags')) %>
+						</a>
+					</li>
+					<li class="waves-block waves-effect<% if(isActive(menuLink5)){ %> active<% } %>">
+						<a href="<%- url_for(menuLink5) %>">
+						<i class="fa fa-user" aria-hidden="true"></i>			
+						<%=(__('menu.' + 'user') || _.startCase('user')) %>
+						</a>
+					</li>
+				</ul>
+				<div class="jquery-accordion-menu-footer">
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			(function($) {
+			$.expr[":"].Contains = function(a, i, m) {
+				return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+			};
+			function filterList(header, list) {
+				//@header 头部元素
+				//@list 无需列表
+				//创建一个搜素表单
+				var form = $("<form>").attr({
+					"class":"filterform",
+					action:"#"
+				}), input = $("<input>").attr({
+					"class":"filterinput",
+					type:"text"
+				});
+				$(form).append(input).appendTo(header);
+				$(input).change(function() {
+					var filter = $(this).val();
+					if (filter) {
+						$matches = $(list).find("a:Contains(" + filter + ")").parent();
+						$("li", list).not($matches).slideUp();
+						$matches.slideDown();
+					} else {
+						$(list).find("li").slideDown();
+					}
+					return false;
+				}).keyup(function() {
+					$(this).change();
+				});
+			}
+			$(function() {
+				filterList($("#form"), $("#demo-list"));
+			});
+			})(jQuery);	
+		</script>
+
+		<script type="text/javascript">
+			jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
+		</script>
 	</div>
-</div>
-
-<script type="text/javascript">
-(function($) {
-$.expr[":"].Contains = function(a, i, m) {
-	return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
-};
-function filterList(header, list) {
-	//@header 头部元素
-	//@list 无需列表
-	//创建一个搜素表单
-	var form = $("<form>").attr({
-		"class":"filterform",
-		action:"#"
-	}), input = $("<input>").attr({
-		"class":"filterinput",
-		type:"text"
-	});
-	$(form).append(input).appendTo(header);
-	$(input).change(function() {
-		var filter = $(this).val();
-		if (filter) {
-			$matches = $(list).find("a:Contains(" + filter + ")").parent();
-			$("li", list).not($matches).slideUp();
-			$matches.slideDown();
-		} else {
-			$(list).find("li").slideDown();
-		}
-		return false;
-	}).keyup(function() {
-		$(this).change();
-	});
-}
-$(function() {
-	filterList($("#form"), $("#demo-list"));
-});
-})(jQuery);	
-</script>
-
-<script type="text/javascript">
-	jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
-</script>
-</div>
 </aside>

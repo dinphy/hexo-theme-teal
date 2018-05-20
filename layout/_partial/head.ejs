@@ -58,41 +58,41 @@
             <%- site.data.head[i] %>
         <% } %>
     <% } %>
+	
 	<link href="/css/jquery-accordion-menu.css" rel="stylesheet" type="text/css" />
-	<link href="/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
 	<style type="text/css">
-	*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
-	body{background:#f0f0f0;}
-	.filterinput{
-		background-color:rgba(249, 244, 244, 0);
-		border-radius:15px;
-		width:90%;
-		height:30px;
-		border:thin solid #FFF;
-		text-indent:0.5em;
-		font-weight:bold;
-		color:#FFF;
-	}
-	#demo-list a{
-		overflow:hidden;
-		text-overflow:ellipsis;
-		-o-text-overflow:ellipsis;
-		white-space:nowrap;
-		width:100%;
-	}
+		*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+		body{background:#f0f0f0;}
+		.filterinput{
+			background-color:rgba(249, 244, 244, 0);
+			border-radius:15px;
+			width:90%;
+			height:30px;
+			border:thin solid #FFF;
+			text-indent:0.5em;
+			font-weight:bold;
+			color:#FFF;
+		}
+		#demo-list a{
+			overflow:hidden;
+			text-overflow:ellipsis;
+			-o-text-overflow:ellipsis;
+			white-space:nowrap;
+			width:100%;
+		}
 	</style>
 
-	<script src="/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="/js/jquery-2.1.1.min.js" type="text/javascript"></script>
 	<script src="/js/jquery-accordion-menu.js" type="text/javascript"></script>
 	<script type="text/javascript">
-
-	$(function(){	
-		//顶部导航切换
-		$("#demo-list li").click(function(){
-			$("#demo-list li.active").removeClass("active")
-			$(this).addClass("active");
+		$(function(){	
+			//顶部导航切换
+			$("#demo-list li").click(function(){
+				$("#demo-list li.active").removeClass("active")
+				$(this).addClass("active");
+			})	
 		})	
-	})	
 	</script>
 </head>
