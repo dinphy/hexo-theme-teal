@@ -94,46 +94,6 @@
     position: relative;
     overflow-y: auto;
   }
-
-  .nav {
-    margin: 0;
-    padding: 12px 0;
-    height: 300px;
-    min-height: ~"calc(100% - 115px)";
-    list-style: none;
-    line-height: @navH;
-
-    li {
-      padding: 0 @menuPadding;
-
-      .icon {
-        position: absolute;
-        top: 0;
-        left: @menuPadding;
-        line-height: inherit;
-      }
-
-      &.active,
-      &:hover {
-        background: rgba(0, 0, 0, .05);
-
-        .icon,
-        a {
-          color: @primaryColor;
-        }
-      }
-    }
-
-    a {
-      display: block;
-      padding-left: @menuPadding*2.4;
-      height: @navH;
-      line-height: @navH;
-      font-weight: 500;
-      color: @secondaryTextColor;
-      text-decoration: none;
-    }
-  }
 }
 
 #main {
