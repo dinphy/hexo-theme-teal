@@ -45,7 +45,7 @@
 							<%=(__('menu.' + 'home') || _.startCase('home')) %>
 						</a>
 					</li>
-					<li class="waves-block waves-effect<% if(isActive(menuLink2)){ %> active<% } %>">
+					<li class="waves-block waves-effect<% if(isActive(menuLink2)){ %> active<% } %>" style="border-bottom: 1px solid #F0F0F0;">
 						<a href="<%- url_for(menuLink2) %>">
 							<i class="fa fa-list-alt" aria-hidden="true"></i>
 							<%=(__('menu.' + 'th-list') || _.startCase('th-list')) %>
@@ -82,11 +82,10 @@
 				<div style="padding-top:15px;text-align:center;font-size:16px;">
 					文章总数：<%- site.posts.length %> 篇（ <%- totalcount(site) %>字）
 				</div>
-		</div>
-
-<script>
-$.sidebarMenu($('.sidebar-menu'))
-</script>
+			</div>
+			<script>
+			$.sidebarMenu($('.sidebar-menu'))
+			</script>
 		</div>
 	</div>
 </aside>
