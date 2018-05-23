@@ -10,7 +10,7 @@
 					<img src="<%- url_for(theme.avatar) %>">
 				  </a>
 				  <h5 class="nickname"><%- config.author %></h5>
-				  <!-- <h5 class="description"><%- config.description %></h5> -->
+				  <h5 class="description"><%- config.description %></h5>
 				<%
 				  for (var i in theme.socail) {
 					link = theme.socail[i];
@@ -37,9 +37,9 @@
 			menuLink4 = theme.menu['tags'];
 			menuLink5 = theme.menu['user'];
 			  %>
-			<div id="jquery-accordion-menu" class="jquery-accordion-menu white">
-				<ul id="demo-list">	 
-				   <li class="waves-block waves-effect<% if(isActive(menuLink1)){ %> active<% } %>">
+			<div  class="sidebar">
+				<ul class="sidebar-menu">	 
+				        <li class="waves-block waves-effect<% if(isActive(menuLink1)){ %> active<% } %>">
 						<a href="<%- url_for(menuLink1) %>">
 							<i class="fa fa-home" aria-hidden="true"></i>
 							<%=(__('menu.' + 'home') || _.startCase('home')) %>
@@ -49,8 +49,9 @@
 						<a href="<%- url_for(menuLink2) %>">
 							<i class="fa fa-list-alt" aria-hidden="true"></i>
 							<%=(__('menu.' + 'th-list') || _.startCase('th-list')) %>
+							<i class="fa fa-angle-left pull-right"></i>
 						</a>
-							<ul class="submenu">
+							<ul class="treeview-menu">
 								<li>
 								<%- list_categories({
 									show_count: false,
@@ -78,14 +79,14 @@
 						</a>
 					</li>
 				</ul>
-				<div class="jquery-accordion-menu-footer">
-					<b>文章总数：<%- site.posts.length %> 篇（ <%- totalcount(site) %>字）</b>
+				<div style="padding-top:15px;text-align:center;font-size:16px;">
+					文章总数：<%- site.posts.length %> 篇（ <%- totalcount(site) %>字）
 				</div>
 		</div>
 
-		<script type="text/javascript">
-			jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
-		</script>
+<script>
+$.sidebarMenu($('.sidebar-menu'))
+</script>
 		</div>
 	</div>
 </aside>
