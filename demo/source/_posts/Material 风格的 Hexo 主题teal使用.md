@@ -1,11 +1,15 @@
 ---
-title: Material Design 风格的 Hexo 主题使用说明
+title: Material 风格的 Hexo 主题teal使用
 category:
-  - 学习笔记
+  - 学习参考
 tags:
   - 学习笔记
+  - web技术
+  - blog
+  - hexo
+  - github
 abbrlink: 8e1e451e
-date: 2018-05-14 00:00:00
+date: 2018-05-20 18:35:00
 ---
 
 ### 简介

@@ -1,33 +1,34 @@
 {
   "skills": {
-    "C++": 5,
+    "HTML": 5,
     "Java": 3,
     "CSS": 2,
+    "ASP": 2,
 
     "invisible-split-line-1": -1,
 
     "Shell": 4
   },
   "projects": [{
-    "name": "项目A",
-    "image": "http://file06.16sucai.com/2016/0926/93ad20908e602433784051bca1161eec.jpg",
-    "tags": ["2017年", "项目标签"],
-    "description": "xx",
-    "link_text": "Github地址",
-    "link": "https://github.com/"
+    "name": "SudaROM",
+    "image": "https://raw.githubusercontent.com/dinphy/website_pic/master/photos/about/1.jpg",
+    "tags": ["2018年", "sudamod", "SudaROM"],
+    "description": "基于SudaROM再次修改的Android第三方纯净本地化系统，农历、归属地等，加入私有APP",
+    "link_text": "SudaROM开源地址",
+    "link": "https://github.com/sudarom"
   }, {
-    "name": "作品B",
-    "image": "http://file05.16sucai.com/2015/0611/341c4081207dffa83598f9e7ce5bef99.jpg",
-    "description": "xx",
-    "tags": ["Github", "设计"],
-    "link_text": "Github地址",
-    "link": "https://github.com/"
+    "name": "crDroid",
+    "image": "https://raw.githubusercontent.com/dinphy/website_pic/master/photos/about/2.jpg",
+    "description": "基于LineageOS再次修改的Android第三方纯净本地化系统，加入农历、归属地等，菜单自定义样式很多",
+    "tags": ["2018年", "Github", "crDroidAndroid", "LineOS"],
+    "link_text": "crDroidAndroid开源地址",
+    "link": "https://github.com/lineos"
   }, {
-    "name": "作品C",
-    "image": "http://file01.16sucai.com/d/file/2014-01-18/13900358739440.jpg",
-    "description": "xx",
-    "tags": ["Github", "作品"],
-    "link_text": "Github地址",
-    "link": "https://github.com/"
+    "name": "MoKeeD",
+    "image": "https://raw.githubusercontent.com/dinphy/website_pic/master/photos/about/3.jpg",
+    "description": "基于MoKee再次修改的Android第三方纯净本地化系统，农历、归属地等，去掉了魔趣一系列服务，更省电",
+    "tags": ["Github", "2018年", "mokee", "dinphy"],
+    "link_text": "MoKeeD开源地址",
+    "link": "https://github.com/mokeed"
   }]
 }

@@ -1,12 +1,12 @@
 ---
 title: 优化hexo文章网址链接URL唯一且永久化
 categories:
-  - 学习笔记
-  - hexo
+  - web技术
 tags:
   - 学习笔记
-  - web
-  - hexo
+  - web技术
+  - hexo运用
+  - github
 abbrlink: '31143271'
 date: 2018-05-19 12:16:39
 ---

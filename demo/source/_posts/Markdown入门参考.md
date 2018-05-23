@@ -1,11 +1,11 @@
 ---
 title: Markdown 入门参考
 type: categories
-categories: 学习笔记
+categories: 
+  - 学习参考
 tags:
   - Markdown
   - 语法
-  - web
 abbrlink: '3e793072'
 visible: hide
 date: 2018/05/15 21:00:38
@@ -13,6 +13,9 @@ updated: 2018/05/17 19:38:29
 ---
 
 
+>Markdown 学习参考
+- [Markdown | 指导文档](http://www.markdown.cn/)
+- [Editor.md | 在线编辑器](https://pandao.github.io/editor.md/examples/dynamic-create-editormd.html)
 
 ## 基本语法
 

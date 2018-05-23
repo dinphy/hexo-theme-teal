@@ -25,8 +25,8 @@
 
         <section>
           <div class="about-me">
-              <h4 >
-                <i class="icon icon-lg icon-user-o" aria-hidden="true"></i> <%= __('menu.user') %>
+              <h4 style="padding-top:20px; padding-bottom:10px;">
+                <i class="icon icon-lg icon-user-o" aria-hidden="true"></i> <%= __('menu.user') %>&nbsp;&nbsp;|&nbsp;&nbsp;<%- config.author %>
               </h4>
               <div class="content"><%- post.content %></div>
           </div>
@@ -34,7 +34,7 @@
 
         <% if (aboutData.skills) { %>
         <section>
-            <h4 >
+            <h4 style="padding-top:20px; padding-bottom:10px;">
               <i class="icon icon-lg icon-sliders" aria-hidden="true"></i> <%= __('about.skills') %>
             </h4>
             <ul class="skill-list">
@@ -62,7 +62,7 @@
 
         <% if (aboutData.projects && aboutData.projects.length > 0) { %>
         <section>
-            <h4 >
+            <h4 style="padding-top:20px; padding-bottom:10px;">
               <i class="icon icon-lg icon-cubes" aria-hidden="true"></i> <%= __('about.projects') %>
             </h4>
             <div class="flex-row-wrap">

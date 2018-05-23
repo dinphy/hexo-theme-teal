@@ -1,15 +1,15 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
+# Hexo Configuration zh-CN
+## Docs:            https://hexo.io/docs/configuration.html
+## Source:          https://github.com/hexojs/hexo/
 
 # Site
-title: Dinphy - 简乐 
-subtitle: 生活不易,快乐就好
-description: 生活不易,快乐就好
-keywords: 小王,dinphy,定飞,国庆
-author: Dinphy - 简乐
-language: zh-CN
-timezone: Asia/Shanghai
+title:              Dinphy - 简乐
+subtitle:           生活不易,快乐就好
+description:        生活不易,快乐就好
+keywords:           小王,dinphy,定飞,国庆
+author:             Dinphy - 简乐
+language:           zh-CN
+timezone:           Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -23,45 +23,45 @@ abbrlink:
   rep: hex
 
 # Directory | 目录
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-about_dir: about
-code_dir: downloads/code
-i18n_dir: :lang
+source_dir:         source
+public_dir:         public
+tag_dir:            tags
+archive_dir:        archives
+category_dir:       categories
+about_dir:          about
+code_dir:           downloads/code
+i18n_dir:           :lang
 skip_render:
 
 # Writing | 写作
-new_post_name: :title.md # File name of new posts
-default_layout: post
-auto_spacing: true
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
-filename_case: 0
-render_drafts: false
+new_post_name:      :title.md # File name of new posts
+default_layout:     post
+auto_spacing:       true
+titlecase:          false # Transform title into titlecase
+external_link:      true # Open external links in new tab
+filename_case:      0
+render_drafts:      false
 # https://hexo.io/zh-cn/docs/asset-folders.html
 post_asset_folder: false
-relative_link: false
-future: true
+relative_link:      false
+future:             true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
+  enable:           true
+  line_number:      true
+  auto_detect:      false
   tab_replace:
-  
+
 # Home page setting | 主页设置
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
+# path:             Root path for your blogs index page. (default = '')
+# per_page:         Posts displayed per page. (0 = disable pagination)
+# order_by:         Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
-  per_page: 10
-  order_by: -date
-  
+  path:             ''
+  per_page:         10
+  order_by:         -date
+
 # Category & Tag | 分类 & 标签
-default_category: uncategorized
+default_category:   uncategorized
 category_map:
 tag_map:
 
@@ -69,55 +69,55 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
+date_format:        YYYY-MM-DD
+time_format:        HH:mm:ss
 
 # Pagination | 分页
-## Set per_page to 0 to disable pagination
-per_page: 10
-pagination_dir: page
+## Set per_page to 0 to disable pagination | 将per_page设置为0以禁用分页
+per_page:           10
+pagination_dir:     page
 archive_generator:
-  per_page: 0
+  per_page:         0
 tag_generator:
-  per_page: 0
+  per_page:         0
 category_generator:
-  per_page: 0
+  per_page:         0
 
 # Extensions | 主题扩展
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: teal
+## Plugins:         https://hexo.io/plugins/
+## Themes:          https://hexo.io/themes/
+theme:             teal
 
 # Deployment | 部署
-## Docs: https://hexo.io/docs/deployment.html
+## Docs:            https://hexo.io/zh-cn/docs/deployment.html
 deploy:
   type: git
   repository: git@github.com:dinphy/dinphy.github.io.git
   branch: master
-  message: '站点更新:{{now("YYYY-MM-DD HH/mm/ss")}}'
+  message: '站点更新:{{now("YYYY-MM-DD HH:mm:ss")}}'
   
 # rss
 feed:
-  type: atom
-  path: atom.xml
-  limit: 0
-  
-# jsonContent
+  type:             atom
+  path:             atom.xml
+  limit:            0
+# jsonContent | 用于生成静态站点数据，用作站内搜索的数据源
+## npm install --save hexo-generator-json-content
 jsonContent:
-  meta: false
-  pages: false
+  meta:             false
+  pages:            false
   posts:
-    title: true
-    date: true
-    path: true
-    text: true
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: false
-    tags: true
+    title:          true
+    date:           true
+    path:           true
+    text:           true
+    raw:            false
+    content:        false
+    slug:           false
+    updated:        false
+    comments:       false
+    link:           false
+    permalink:      false
+    excerpt:        false
+    categories:     false
+    tags:           true
