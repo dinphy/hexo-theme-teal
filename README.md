@@ -7,20 +7,22 @@ Hexo Theme Material Teal
 
 Material Design 风格的 Hexo 主题 Teal 配色
 
-yscoder原版[预览效果](https://yscoder.github.io)：[hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo) 
+yscoder原版[预览效果](https://yscoder.github.io)>>[hexo-theme-indigo](https://github.com/yscoder/hexo-theme-indigo) 
 
-Zoctan版本[预览效果](https://hexo-theme-teal.herokuapp.com/)：[hexo-theme-teal](https://github.com/Zoctan/hexo-theme-teal) 
+Zoctan版本[预览效果](https://hexo-theme-teal.herokuapp.com/)>>[hexo-theme-teal](https://github.com/Zoctan/hexo-theme-teal) 
 
 dinphy版本：
 
-	- 修复搜索
-	- 改变字体大小，修复对齐分享中的图标
-	- 添加文章字数统计
-	- 添加文章篇数统计
-	- 添加文章页结束语
-	- 添加Valine评论插件
-	- TOC翻译为中文
-	- demo文件夹中的内容直接复制到对应的source文件夹使用
+- 修复搜索
+- 改变字体大小，修复对齐分享中的图标
+- 添加文章字数统计
+- 添加文章篇数统计
+- 添加文章页结束语
+- 添加Valine评论插件
+- TOC翻译为中文
+- 更改左侧菜单栏样式，添加分类二级下拉伸缩
+- demo文件夹中的内容直接复制到对应的source文件夹使用
+- 参考文件在>>[站点备份](https://github.com/dinphy/dinphy.github.io.back)
 
 ### 快速开始[Hexo | 帮助文档](https://hexo.io/zh-cn/docs/)
 
