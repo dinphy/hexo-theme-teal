@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-material-teal",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Material Design theme for Hexo.",
   "keywords": [
     "hexo",
@@ -8,12 +8,12 @@
     "material design"
   ],
   "author": {
-    "name": "Zoctan",
-    "email": "752481828@qq.com"
+    "name": "dinphy",
+    "email": "2027821710@qq.com"
   },
   "license": "MIT",
   "repository": {
-    "url": "git+https://github.com/Zoctan/hexo-theme-teal.git",
+    "url": "git+https://github.com/dinphy/hexo-theme-indigo.git",
     "type": "git"
   }
 }
